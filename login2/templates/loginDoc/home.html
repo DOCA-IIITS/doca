@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+	<head>
+		<title> AfAD </title>
+		<link rel="stylesheet" type="text/css" href="{%static 'c5.css'%}">
+	</head>
+		<div id="div2">
+		<div style='width:50px,overflow:hidden;border-radius:25px'>
+			<img src={% static udp%} style='width:150px'>
+		</div>
+		<h1>Welcome  {{uname}}</h1>
+    <h2> to homepage of DOCA</h2>
+    <h4>doctor online consoltancy and appointement</h4>
+		<form action='/login/home/' method='POST'>
+		{% csrf_token %}
+		<button> Log out </button>
+		<a href="/chat/chatbox/">chat box </a>
+		</form>
+		</div>
+	</body>
+</html>

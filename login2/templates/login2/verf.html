@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+	<head>
+		<title> chat </title>
+		<link rel="stylesheet" type="text/css" href="{%static 'c5.css'%}">
+	</head>
+	<body>
+<div id="div1">
+			Verification
+
+		</div>
+		<div id="div2">
+		<form action="\login\verf" Method="GET">
+		<input type='hidden' value='{{uidc}}' name='uidc'>
+		<table id="table1">
+		{%if err%}
+			<tr><td style='font-size:30px;color:red;background-color:#80ffff'>{{err}}</td>
+			</tr>
+			<tr><td><span id='sp1'>Avinash</span></td></tr>
+		{%endif%}
+				<tr>
+					<td id="td1">Enter otp </td>
+					<td id="td2"><input id='id_otp' name='otp' ></td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+				<tr><td><span id="sp1">Avinash</span></td></tr>
+					<td  id="td5" colspan="2"><button id="btn1">next</button></td>
+				</tr>
+			</table>
+
+
+		</form>
+</body>
+</html>

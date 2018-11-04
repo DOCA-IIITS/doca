@@ -1,0 +1,17 @@
+#p1{color:blue;font-size:40px}
+#s2{color:#ff0070;font-size:50px}
+#div1{width:100%;background-image: url("background.jpg");color:#ffffff;font-size:80px;height:120px;font-weight:bold;border-collapse:seprate;border-spacing:40px;}
+#div2{width:90%;border-RAdius:15px;padding-bottom:50px;background-color:#ffffff;margin-top:1px;margin-left:5%;margin-right:5%}
+body{background-color:#aaaaaa}
+#table1{width:100%; margin-top:10px;padding:50px}
+#td5{text-align:center;}
+#td1,#td3{color:#555555;width:40%;font-size:30px;margin-top:5px;}
+#td2,#td4{width:60%;margin-top:5px;}
+#id_uid,#id_password,#id_fn,#id_ln,#id_dob,#id_otp,#id_address,#id_city,#id_state,#id_country{width:100%;border-radius:3px;padding:1px 2px;font-size:20px;padding :10px 2px}
+#btn1{width:40%;padding:8px 1px;font-size:30px;border-radius:10px}
+#btn1:hover{background-color:red;color:ffffff}
+#a1,#a2{ margin-left:20px;font-size:30px;font-decoration:none}
+#sp1{font-size:10px;color:white;}
+#div3{display:none;width:90%;border-RAdius:15px;padding-bottom:50px;background-color:#ffffff;margin-top:4%;margin-left:5%;margin-right:5%}
+#s1{font-size:50px;}
+#td6{font-size: 40px;text-align: right;margin-top: 40px;}

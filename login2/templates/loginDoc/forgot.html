@@ -1,0 +1,62 @@
+{% load static%}
+<html>
+	<head>
+		<title> chat </title>
+		<link rel="stylesheet" type="text/css" href="{% static divn%}">
+	</head>
+	<body>
+		<div id="div1">
+			Chat
+		</div>
+    <div id="div2">
+		<form action="/loginDoc/forgotDoc" Method="GET">
+			<table id="table1">
+				{%if err%}
+					<tr><td style='font-size:30px;color:red;background-color:#80ffff'>{{err}}</td></tr><tr><td><span id='sp1'>Avinash</span></td></tr>";
+        {%endif%}
+				<tr>
+					<td id="td1"> User id </td>
+					<td id="td2"><input type="email" name="uid" id="id_uid" autocomplete="off"></td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+					<td  id="td5" colspan="2"><button id="btn1">next</button></td>
+				</tr>
+			</table>
+
+		</form>
+</div>
+		<form action="/loginDoc/forgotDoc/" Method="POST">
+		<div id="div3">
+		<table id="table1">
+		{%if err%}
+			<tr><td style='font-size:30px;color:red;background-color:#80ffff'>{{err}}</td></tr><tr><td><span id='sp1'>Avinash</span></td></tr>
+		{%endif%}
+				<tr>
+					<td id="td1"> Password </td>
+					<td id="td2">{% csrf_token %}<input type="password" name="password" id="id_password" autocomplete="off"></td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+					<tr><td id="td1">Enter otp </td><td id="td2"><input type='text' name='otp' id='id_otp'></td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+					<td  id="td5" colspan="2"><button id="btn1">change</button></td>
+				</tr>
+			</table>
+      {%if uidc%}
+			<input type='hidden' value='{{uidc}}' name='uid'>
+      {%endif%}
+
+		</div>
+		</form>
+		{%if divn%}
+      <script> a();
+      </script>
+    {%endif%}
+    {%if request.method == 'GET'%}
+    <script type='text/javascript'>
+				function a(){
+				document.getElementById('div2').style.display='none';
+				document.getElementById('div3').style.display='block';
+        }
+		</script>
+		{%endif%}
+	</body>
+
+</html>

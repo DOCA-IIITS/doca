@@ -1,0 +1,57 @@
+{%load  static %}
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "c5.css" %}">
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<style>
+#btn1 , #btn2{color:#fff;background-color:#ff0070;font-size:40px; padding:5px 60px;border:none;margin:2px;border-radius: 20px;visibility:hidden;}
+#btn2{visibility:visible;padding:5px 25px;}
+#d2{margin-top:100px;background-color:white;width:90%;margin-left:5%;text-align:center ;border-radius:30px;}
+
+</style>
+</head>
+
+<body>
+<div id="div1">
+DOCA
+</div>
+<div id="d2">
+<span style="font-size:50px;color:red">Upload Profile Picture</span><br>
+<pre style="color:blue;font-size:40px">
+Upload your profile picture to
+help others to find your account
+</pre>
+<form action="/login/udp/" method="POST" enctype="multipart/form-data">
+<div id="d3" style="width:50%;margin-left:25%;background-size:100%;width:50%s;overflow:hidden;" onclick="f1()">
+{%csrf_token%}
+{{form.file}}
+    <img id="blah" src="{%static 'uploads/A@DOCA@IIIT@DPdefualt.png'%}" style="width:30%" alt="your image" />
+</div>
+<button id ="btn1" name="submit"> Upload
+</button></form>
+<button id="btn2">Skip </button>
+<br>
+<br>
+
+<script>
+function f1(){
+document.getElementById("id_file").click();
+document.getElementById("btn1").style.visibility="visible";
+}
+ function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+	<head>
+		<title> chat </title>
+		<link rel="stylesheet" type="text/css" href="{%static 'ls.css'%}">
+	</head>
+	<body>
+		<div id="div1">
+			Chat
+		</div>
+		<div id="div2">
+		<form action="\login\" Method="POST">
+			<table id="table1">
+				<tr>
+					<td id="td1"> User ID </td>
+					<td id="td2">{% csrf_token %}{{form.your_name}}</td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+				<tr>
+					<td id="td3">Password </td>
+					<td id="td4">{% csrf_token %}{{form.password}}</td1>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+				<tr>
+					<td  id="td5" colspan="2"><button id="btn1">Login</button></td>
+				</tr>
+			</table>
+			<a href="fp.php" id="a1">Forgot password </a><br>
+			<a href="su.php" id="a2">Register Now</a>
+		</form>
+		</div>
+	</body>
+</html>

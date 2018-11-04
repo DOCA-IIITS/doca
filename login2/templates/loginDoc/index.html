@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+	<head>
+		<title> AfAD </title>
+		<link rel="stylesheet" type="text/css" href="{%static 'c5.css'%}">
+	</head>
+	<body>
+	<div id="div1">
+		DOCA
+	</div>
+		<div id="div2">
+		<form action="\loginDoc\loginDoc\" Method="POST">
+			<table id="table1">
+			{%if err%}<tr><td style='font-size:30px;color:#ffffff;background-color:#e77471'>{{err}}</td></tr><tr><td><span id='sp1'>Avinash</span></td></tr>
+			{%endif%}	<tr>
+					<td id="td1"> User ID </td>
+					<td id="td2">{% csrf_token %}{{form.uid}}</td>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+				<tr>
+					<td id="td3">Password </td>
+					<td id="td4">{% csrf_token %}{{form.password}}</td1>
+				</tr><tr><td><span id="sp1">Avinash</span></td></tr>
+				<tr>
+					<td  id="td5" colspan="2"><button id="btn1">Login</button></td>
+				</tr>
+				<tr>
+					<td id="td6" colspan="2"><a href="/login/forgot" id="a1">I'm Patient </a><br><td>
+				</tr>
+			</table>
+			<a href="/loginDoc/forgotDoc" id="a1">Forgot password </a><br>
+			<a href="/loginDoc/regDoc/" id="a2">Register Now</a>
+		</form>
+		</div>
+	</body>
+</html>
