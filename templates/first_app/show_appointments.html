@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW APPOINTMENTS</title>
+</head>
+<body>
+
+    {% if doctors %}
+        <table>
+            <th>DOCTOR NAME</th>
+            <th>FEES</th>
+            <th>RATING</th>
+            {%  for doc in doctors %}
+                <form action="{%  url 'bookapp' %}" method="POST">
+                {% csrf_token %}
+            <tr>
+                <td name="doc_name">
+                    {{ doc.doc_name }}
+                </td>
+                <td name="fees">
+                    {{ doc.fees }}
+                </td>
+                <td name="rating">
+                    {{ doc.rating }}
+                </td>
+                <td>
+                    <input type="submit" value="Book">
+                </td>
+
+            </tr>
+
+                </form>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No Doctor Found</p>
+    {% endif %}
+
+</body>
+</html>
