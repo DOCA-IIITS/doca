@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOK APPOINTMENTS</title>
+</head>
+<body>
+    <h1>BOOK APPOINTMENTS</h1>
+    <form method="POST" action="{%  url 'showapp' %}" >
+
+        {% csrf_token %}
+        <select name="loc" id="loc">
+            {% for loc in locations %}
+            <option>{{ loc }}</option>
+            {% endfor %}
+        </select>
+
+
+
+
+
+
+        <select name="cat" id="cat">
+             {% for cat in categories %}
+            <option>{{ cat }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="submit">
+
+
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .inner{
+          padding-top: 60px;
+          color: black;
+          height: 150px;
+          text-align: center;
+          font-size: 30px;
+          width: 60%;
+          background-color: rgba(73,75,72,0.7);
+          border: solid white;
+          border-radius: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+  <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      var placeloc1;
+      var j=0;
+      var map;
+      var infowindow;
+      var placedisp = [];
+
+      function initMap() {
+        var hyderabad = {lat:{{ loc1 }},lng:{{ loc2 }}};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: hyderabad,
+          zoom: 13,
+            unitSystem: google.maps.UnitSystem.METRIC
+        });
+
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: hyderabad,
+          radius: 500,
+          type: ['hospital']
+        }, callback);
+      }
+
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+              for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+
+          }
+        }
+      }
+
+
+
+      function createMarker(place) {
+        placeLoc1 = place.geometry.location;
+        j+=1;
+        {#palce123 = placeloc#}
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location,
+
+          {#document.getElementById("text").innerHTML = "Hello Dolly!";#}
+        });
+        {#document.getElementById("text").innerHTML = marker.position;#}
+        {#va#}
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+          {#document.getElementById("text").innerHTML += "<br>"+place.name;#}
+          {#placedisp.push(place.name)#}
+          return place.name
+        });
+        placedisp.push(place.name)
+        }
+{#      var i,text="";#}
+{#      for (i = 0; i < placedisp.length; i++) {#}
+{#      text += placedisp[i] + "<br>";#}
+      {#document.write(placedisp[i])#}
+
+{#    document.getElementById("text").innerHTML = text;#}
+window.onload=function(){
+    var output = document.getElementById('output');
+    var i=0;
+    var val="";
+    while(i<=placedisp.length-1)
+    {
+        var btn = document.createElement('button');
+        btn.id = 'btn1';
+        if(!document.getElementById('demo'+i))
+        {
+            var ele = document.createElement("div");
+            ele.setAttribute("id","demo"+i);
+            var loc_name=placedisp[i];
+            ele.setAttribute("class","inner");
+            ele.innerHTML=loc_name+"<br>";
+            ele.innerHTML += "<a href='/maps/routes/"+loc_name+"/'><button>Get route</button></a>";
+            output.appendChild(ele);
+
+        }
+        i++;
+
+
+    }
+};
+
+    </script>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxpI4Sl1hM7TEu1eoWgYqz8NJwRmdbl6s&libraries=places&callback=initMap" async defer></script>
+    <p id="text"></p><br><br>
+    <p id="text2"></p><br><br>
+    <div id="output" class="out">
+{#        <a href="{% url 'routes' %}"><button id="btn1">Get routes</button></a>#}
+    </div>
+
+  </body>
+</html>
