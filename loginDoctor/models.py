@@ -19,6 +19,10 @@ class Doctor(models.Model):
         if self.gender==1:
             return 'FEMALE'
         return 'MALE'
+class spec(models.Model):
+   spec=models.CharField(max_length=60,primary_key=True)
+class location(models.Model):
+    loc=models.CharField(max_length=60,primary_key=True)
 class DoctorApplied(models.Model):
     fname=models.CharField(max_length=50,null=False,blank=False)
     lname=models.CharField(max_length=50,null=False,blank=False)

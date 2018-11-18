@@ -57,14 +57,18 @@ chatSocket.onmessage=function(e){
 
 
 	var load_data = function(index) {
-			this.file = document.getElementById('id_img').files[0];
+			this.file= document.getElementById('id_img').files[0];
+			if(this.file===undefined){
+				console.log("null")
+			}
+			else{
 	    var end =  index +4096 ;
 	    if (index >=this.file.size)
 	        return;
 	    if (end > this.file.size)
 	        end = this.file.size;
 	    chatSocket.send(this.file.slice(index, end));
-			console.log('sending')
+			console.log('sending')}
 	}.bind(this);
 	switch (msgData.action) {
         case 'progress':
@@ -76,6 +80,7 @@ chatSocket.onmessage=function(e){
             break;
         case 'complete':
             // Handle complete
+
             break;
             }
 
@@ -106,8 +111,8 @@ chatSocket.onopen=function(e){
 		}
 	}
 	chatSocket.send(JSON.stringify(msg_data));
-	formData[0].reset()
-	formData[1].reset()
+	msgData.value="";
+
 })
 }
 chatSocket.onclose=function(e){

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/css/bootstrap.css' %}">
+    <link rel="styleaheet" href="{% static 'first_app/css/style.css' %}">
+</head>
+<body>
+
+    <h1>THIS IS HOMEPAGE</h1>
+<a href="{%  url 'book' %}">BOOK</a>
+<button onclick="location.href='{% url 'showappmnts' %}'"   class="btn btn-success">Show Appointments</button>
+
+</body>
+</html>

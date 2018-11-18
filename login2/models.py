@@ -17,6 +17,8 @@ class user(models.Model):
         if self.gender==1:
             return 'FEMALE'
         return 'MALE'
+
+
 class userApplied(models.Model):
     fname=models.CharField(max_length=50,null=False,blank=False)
     lname=models.CharField(max_length=50,null=False,blank=False)

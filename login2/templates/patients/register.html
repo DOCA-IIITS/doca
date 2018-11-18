@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Timmana' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body style="background-image:url('https://www.convenzis.co.uk/wp-content/uploads/2018/05/hdt-london.jpg');">
+    <br>
+    <div class="container">
+      <div class="row" style="background-image:linear-gradient(to right, rgba(255,255,255,1) , rgba(0,0,0,1))">
+        <div style="width:11%;">
+          <img src="{% static "images/logo.png" %}" alt="ERROR!" id="logo" style="width:100%;height:100%">
+        </div>
+        <div style="width:89%;font-family: Monoton; font-size: 90px; color:#35a344;vertical-align:bottom;">
+          <span style="color:#4451ff">D</span>OCA
+        </div>
+      </div>
+    <br><br>
+    <center>
+      <div style="background-color:#008cff;width:100%;border-radius:10% 10% 0% 0%;border: 1px solid black;font-size:35px;font-family:Amita;">
+        REGISTER
+      </div>
+      <form id="form" method="POST" style='width:100%;'>
+        {% csrf_token %}
+        <br>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">First Name</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.fn|as_crispy_field }}
+          </div>
+          <label for="inputPassword3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Last Name</h5></label>
+          <div class="col-sm-4" style='width:30%;'>
+            {{ form.ln|as_crispy_field }}
+          </div>
+        </div><br>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Date of Birth</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.dob|as_crispy_field }}
+          </div>
+          <label for="inputPassword3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Gender</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            <br>
+            {% for radio in form.gender %}
+              <div style='font-family:Acme; font-size:20px;color:#ffffff'>
+                {{ radio }}
+              </div>
+            {% endfor %}
+          </div>
+        </div><br>
+        <div class="form-group row" style='width:30%;color:#dc3545;font-size:13px;'>
+          {% if erru %}
+            {{ erru }}
+          {% endif %}
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Email</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.uid|as_crispy_field }}
+          </div>
+        </div><br>
+        <div class="form-group row" style='width:30%;color:#dc3545;font-size:13px;'>
+          {% if errp %}
+            {{ errp }}
+          {% endif %}
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Password</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.password|as_crispy_field }}
+          </div>
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Retype Password</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.rpass|as_crispy_field }}
+          </div>
+        </div><br>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Country</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.country|as_crispy_field }}
+          </div>
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">State</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.state|as_crispy_field }}
+          </div>
+        </div><br>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">City</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.city|as_crispy_field }}
+          </div>
+          <label for="inputEmail3" class="col-sm-2 col-form-label"><h5 style="color:#ffffff; font-family:Acme">Address</h5></label>
+          <div class="col-sm-3.9" style='width:30%;'>
+            {{ form.address|as_crispy_field }}
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <input class='btn btn-primary' type="submit" style='width:70%;' name="submit" value="Register" align='center'>
+          </div>
+          <div class="col-sm-6">
+            <a class='btn btn-primary' style='width:70%;' href="{% url 'patients:login' %}" align='center'>Login</a>
+          </div>
+        </div><br>
+      </form>
+      <br><br>
+    </center>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( ".datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1900:2012",
+      dateFormat:"yy-mm-dd"
+    });
+  });
+  </script>
+  </body>
+</html>

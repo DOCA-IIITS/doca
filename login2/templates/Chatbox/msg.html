@@ -20,7 +20,9 @@ body{background-image: url("{% static 'msgback.jpg' %}");background-repeat: no-r
 		  <ul type='none'>
 		{% if a.imgmsg %}
 
-        <div id='sp1'><li><img src="{% static a.imgmsg|slice:'7::'%}" id='img1'></li>
+        <div id='sp1'><li><img src="{% static a.imgmsg|slice:'7::'%}" id='img1'>
+        
+        </li>
 			{%endif%}
         <li><div id='sp1'> {{a.msg}} </div></li></ul>
     {%endif%}

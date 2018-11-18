@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Appointments</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/css/bootstrap.css' %}">
+    <link rel="styleaheet" href="{% static 'first_app/css/style.css' %}">
+
+</head>
+<body>
+<div class="container" >
+ <br/>
+ <div class="row">
+     <div class="col-lg-4">
+         <h1>Appointments</h1>
+     </div>
+ </div>
+
+    <div class="row" >
+
+        {% for appointment in appointments %}
+        <div class="class1 col-lg-4">
+            <br />
+            <h2>{{ appointment.doc_name}}</h2>
+            <h4>{{  appointment.fees }}</h4>
+            <p>{{ appointment.rating}}</p>
+            <h4>{{ appointment.date }}</h4>
+
+
+
+        <button onclick="location.href='{% url 'delete' pk=appointment.id %}'"   class="btn btn-danger">DELETE</button>
+        </div>
+        {% endfor %}
+    </div>
+ </div>
+<div class="col-lg-8">
+     <button onclick="location.href='{% url 'book' %}'" type="button" class="btn btn-success">Book Appointment</button>
+ </div>
+</body>
+</html>

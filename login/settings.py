@@ -43,17 +43,25 @@ WEBPACK_LOADER = {
 }
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'login2',
-    'loginDoctor',
-    'ChatBox',
-    #'webpack_loader',
-    'channels',
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'login2',
+        'loginDoctor',
+        'ChatBox',
+        'chatbot',
+        'Appointements',
+        'patient_record',
+        'doc_prof',
+        'patients',
+        'crispy_forms',
+        #'webpack_loader',
+        'channels',
+        'rest_framework',
+        'Rating',
 ]
 
 MIDDLEWARE = [
@@ -103,10 +111,20 @@ WSGI_APPLICATION = 'login.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'doca',
+        'USER': 'root',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

@@ -1,0 +1,51 @@
+{%  load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<h1>Prevoius reviews!</h1>
+  {% csrf_token%}
+<div>
+{% if review_det %}
+
+<table border="1">
+    <tr>
+      <th>Published date</th>
+        <th>Doctor_id </th>
+        <th>Rating</th>
+
+    </tr>
+    {% for item in review_det  %}
+    <tr>
+        <td>{{item.pub_date}}</td>
+        <td>{{ item.doctor_id }}</td>
+
+        <td>{{item.rating}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+
+{% if distinct %}
+
+{% for i in distinct%}
+
+<h3>{{i.doctor_id}}</h3>
+<h3>{{i.rating}}</h3>
+
+{% endfor %}
+{% endif %}
+<form method="POST">
+
+ {% csrf_token %}
+
+</form>
+
+<div>
+<a class="btn" href="{% url 'final_app:calculate' %}">
+<button class="btn" type="submit">Ratings of doctor's</button>
+ </a>
+</div>
+</head>
+ </body>
+</html>
+ 

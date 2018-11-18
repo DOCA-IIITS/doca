@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/',include('login2.urls')),
     path('loginDoc/',include('loginDoctor.urls')),
     path('chat/',include('ChatBox.urls')),
-
+    path('Down/',views.AppDown),
+    path('Appointement/',include('Appointements.urls')),
+    path('rating/',include('Rating.urls')),
+    path('patient/',include('patient_record.urls')),
+    path('pat/',include('patients.urls')),
+    path('doc/',include('doc_prof.urls'))
 
 ]

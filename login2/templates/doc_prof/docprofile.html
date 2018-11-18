@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOCA</title>
+    <link rel="stylesheet" href="{% static "css/styl.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Timmana' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+  </head>
+  <body style="background-image:url({% static "images/bg.jpg" %})">
+    <div id="header">
+      <img src="{% static "images/logo.png" %}" alt="ERROR!" id="logo" style="width:120px;height:120px" align='left'>
+      <table>
+        <tr style="text-align: right;">
+          <td id='title'><span style="color:#4451ff">D</span>OCA</td>
+          <td style="width:700px;">
+            <button type="button" name="notif" id="notif">Notifications</button>
+          </td>
+          <td style="width:100px;">
+            <img src="{% static pp %}" alt="ERROR!" style="width:40px; height:40px; border-radius:50%;">
+          </td>
+          <td id='log'>{{ db.fname }}<br><a href='{% url 'doc_prof:logout' %}'>Logout</a></td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <ul id='nav'>
+      <li class="link"><a href="{% url 'doc_prof:home' %}">HOME</a></li>
+      <li class="link" style="background-color: #4451ff"><a href="{% url 'doc_prof:profile' %}">PROFILE</a></li>
+      <li class="link"><a href="#">APPOINTMENTS</a></li>
+      <li class="link"><a href="#">FEEDBACK</a></li>
+    </ul>
+    <br><br><br><br>
+
+    <table id="area">
+      <tr>
+        <td class="prof" style="width:350px;">
+          <div id="propic" style="background-image:url({% static pp %})">
+            <span id='cp'>Change Photo</span>
+          </div><br><br>
+          <ul id='tabs'>
+            <li class="tab" style="background-color:#4451ff;"> <button class="btn" type="button">Basic Info</button> </li>
+            <li class="tab"> <button class="btn" type="button">Qualifications</button> </li>
+            <li class="tab"> <button class="btn" type="button">Address</button> </li>
+            <li class="tab"> <button class="btn" type="button">Contact</button> </li>
+          </ul>
+        </td>
+        <td class="prof" style="vertical-align:middle;">
+          <div class="div">
+            <pre>
+              USER TYPE  : DOCTOR<br>
+              FIRST NAME : {{ db.fname }}<br>
+              LAST NAME  : {{ db.lname }}<br>
+              D.O.B      : {{ db.dob }}<br>
+              GENDER     : {{ gender }}<br>
+              RATING     : 4.5/5<br>
+            </pre>
+          </div>
+          <div class="div" style="display:none;">
+            <pre>
+              MBBS<br>
+              SPECILAZATION : {{ db.Specilazation }}<br><br><br>
+                                            <button id='upq' class='up' type="button" name="button">Update</button>
+            </pre>
+          </div>
+          <div class="div" style="display:none;">
+            <pre>
+              COUNTRY  : {{ db.country }}<br>
+              STATE    : {{ db.state }}<br>
+              CITY     : {{ db.city }}<br>
+              ADDRESS  : {{ db.address }}<br><br><br>
+                                            <button id='upa' class='up' type="button" name="button">Update</button>
+            </pre>
+          </div>
+          <div class="div" style="display:none;">
+            <pre>
+              E-MAIL : <span id="email">{{ db.uid }}</span><br>
+              PASSWORD : <span id="pass">**********</span><br>
+              PHONE 1 : <span id="ph1">9121018699</span><br>
+              PHONE 2 : <span id="ph2">---</span><br><br><br>
+                                            <button id='upc' class='up' type="button" name="button">Update</button>
+            </pre>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="{% static "javascript/script1.js" %}"></script>
+  </body>
+</html>

@@ -8,4 +8,5 @@ urlpatterns=[
     path('forgot/',views.forgot,name='Forgot_Password'),
     path('home/',views.home,name='Home'),
     path('udp/',views.udp,name='udp'),
+    path('imgret/<udp>',views.imgret)
 ]

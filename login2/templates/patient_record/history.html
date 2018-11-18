@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>history</title>
+  </head>
+  <body>
+<center>
+  <div class="row">
+    <div class="col-3">
+      <h3>PROFILE PIC</h3>
+    </div>
+    <div class="col-3">
+      <h3>NAME</h3>
+    </div>
+    <div class="col-3">
+      <h3>DATE</h3>
+    </div>
+    <div class="col-3">
+      <h3>ACTION</h3>
+    </div>
+  </div>
+  {%for i in user%}
+  <div class="row">
+    <div class="col-3">
+      <img src="{% static i.dp|slice:'7:'%}" alt="" style="width:25% ; height:100px" >
+    </div>
+    <div class="col-3">
+      <br>
+      {{i.full_name}}
+    </div>
+    <div class="col-3">
+      <br>
+      {{i.date}}
+    </div>
+    <div class="col-3">
+      <br>
+      <form  class="" action="/patient/history_utils" method="post">
+            {% csrf_token %}
+            <button class="btn btn-primary" name="button">make a note</button>
+            <input type="hidden" name="input" value="{{i.patient_id}}">
+          </form>
+    </div>
+  </div>
+    {%endfor%}
+
+
+</center>
+
+</body>
+</html>
+
+<!--
+<script>
+
+function for_hieght(){
+x=document.getElementById('iframe');
+x.style.height="0px";
+x.style.height=x.contentWindow.document.body.scrollHeight+"px";
+}
+
+function toggle()
+{
+
+ if(  document.getElementById('iframe').style.display=='none')
+    document.getElementById('iframe').style.display='block'
+else
+     document.getElementById('iframe').style.display='none'
+
+}
+
+</script> -->

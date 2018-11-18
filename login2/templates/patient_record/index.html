@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="style.css">
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>patient's record</title>
+  </head>
+  <body>
+    <!-- <h1>hello this is index.html</h1> -->
+
+
+
+
+    <form method="POST" action="/patient/search" >
+
+          {% csrf_token %}
+
+            <select name="patient_name" id="name">        <!--    for select down menu -->
+          <option value="0"selected>select patient name</option>
+          {% for i in patientname %}          <!--    from views.index passed patientname from dic -->
+              <option value="{{i.id}}" >{{ i.name}}
+              </option>
+
+          {% endfor %}
+
+          <option value="1"
+          ><a href="#">show more</a>
+          </option>
+
+          </select>
+
+
+        <select name="disease" id="dis">                 <!--    for select down menu for diseases -->
+          <option value="0"selected>select disease</option>
+              {% for i in diseases %}         <!--    from views.index passed patientnam from dic -->
+              <option>{{ i.disease}}</option>
+              {% endfor %}
+        </select>
+
+        <input type="submit" value="submit">    <!--  on submitting it goes to views.search -->
+
+    </form>
+
+
+<br><br>
+
+
+<table border="1px solid black" style="border-collapse: collapse;">     <!-- after form submit , coming from views.search -->
+<th> profile  pic</th><th> patient name</th> <th>disease</th><th>comment</th> <th> date</th>
+
+
+
+
+{%for i in results%}
+<tr>
+  <td style="width:2%"> <img style="width:100%"src="{%static i.dp|slice:'7::'%}" alt=""></td><td>{{i.full_name}}</td>   <td>{{i.disease}}</td> <td>{{i.comment}}</td> <td>{{i.date}}</td>
+</tr>
+{%endfor%}
+
+</table>
+
+
+<br>
+
+
+<!--  for show medical records button -->
+
+<form class="" action="/patient/photos" method="POST" target="frame">  <!-- target frame is set hence only iframe changes-->
+  {%csrf_token%}
+  <button onclick="toggle()"> show medical records of patient selected </button>
+</form>
+
+
+<iframe src="/patient/photos" onload="for_hieght()" name="frame" style=" width :100%; height:  ; display:none"  id="iframe" >  </iframe>
+
+<br><br>
+<script>
+
+function for_hieght(){
+x=document.getElementById('iframe');
+x.style.height="0px";
+x.style.height=x.contentWindow.document.body.scrollHeight+"px";
+}
+
+function toggle()
+{
+
+ if(  document.getElementById('iframe').style.display=='none')
+    document.getElementById('iframe').style.display='block'
+else
+     document.getElementById('iframe').style.display='none'
+
+}
+
+</script>
+
+  </body>
+</html>

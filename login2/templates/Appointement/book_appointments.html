@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Appointment</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/css/bootstrap.css' %}">
+    <link rel="styleaheet" href="{% static 'first_app/css/style.css' %}">
+</head>
+<body>
+    <h1>Book Your Appointment</h1>
+    <form class="form-horizontal" method="POST" action="{%  url 'showapp' %}" >
+        <div class="form-group">
+    <label >Choose Location:</label>
+
+        {% csrf_token %}
+        <select name="loc" id="loc" >
+            {% for loc in locations %}
+            <option>{{ loc.loc }}</option>
+            {% endfor %}
+        </select>
+</div>
+
+        <br>
+        <div class="form-group">
+    <label>Choose Category: </label>
+
+
+
+
+        <select name="cat" id="cat" >
+             {% for cat in categories %}
+            <option>{{ cat.spec }}</option>
+            {% endfor %}
+        </select>
+         </div>
+        <br>
+        <div class="form-group">
+    <label>Sort By: </label>
+
+        <select name="sort" id="sort">
+            <option>fees</option>
+            <option>rating</option>
+        </select>
+    <br>
+    </div>
+    <input type="submit" value="submit">
+
+
+    </form>
+
+
+</body>
+</html>

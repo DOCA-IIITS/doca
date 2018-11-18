@@ -48,8 +48,12 @@ def index(request):
 def regpatient(request):
     if request.method == 'POST':
         form=regpatientForm(request.POST)
+        print(form)
+
 
         if form.is_valid():
+            print(form)
+
             if user.objects.filter(uid=form.cleaned_data['uid'].lower()).count()==1:
                 return render(request, 'login2/register.html',{'form':form,'err':'email id is aleready in use !!!!!!'})
             otp_gen=random.randint(100000,999999)
@@ -170,15 +174,20 @@ def home(request):
         if user.objects.filter(uid=request.session['uid']).count()==1:
             a=user.objects.filter(uid=request.session['uid']).values()
             if request.session['pwd']==a[0]['password']:
+                dir_path = os.getcwd()
                 for udp in a:
                     try:
-                        f=open(udp['dp'])
+                        f=open(dir_path+'/'+udp['dp'][:14]+'/'+udp['dp'][16:])
                         f.close()
                     except FileNotFoundError:
-                        udp['dp']='static1/uploads/A@DOCA@IIIT@DPdefualt.png'
+                        udp['dp']='static/uploads/A@DOCA@IIIT@DPdefualt.png'
+                    except NotADirectoryError:
+                        udp['dp']='static/uploads/A@DOCA@IIIT@DPdefualt.png'
                 return render(request,'login2/home.html',{'uname':a[0]['fname']+" "+a[0]['lname'],'udp':a[0]['dp'][7::]})
 
     return HttpResponseRedirect('/login/login/')
+def imgret(request,udp):
+    return render(request,"login2/imgret.html",{'udp':udp})
 
 
 

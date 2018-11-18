@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOKED</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'my_app/css/bootstrap.css' %}">
+    <link rel="styleaheet" href="{% static 'my_app/css/style.css' %}">
+</head>
+<body>
+    <h1>CONGRATULATIONS!YOUR BOOKING IS SUCCESSFUL</h1>
+    <h2>DETAILS OF YOUR BOOKING</h2>
+    <table>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Fees</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>{{doc_name}}</td>
+            <td> {{ fees }}</td>
+            <td>{{ date }}</td>
+        </tr>
+    </table>
+<button onclick="location.href='{% url 'showappmnts' %}'"   class="btn btn-success">Show Appointments</button>
+
+</body>
+</html>

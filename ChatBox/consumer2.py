@@ -1,5 +1,7 @@
 from channels.consumer import AsyncConsumer
 from channels.db import database_sync_to_async
+from twisted.plugins.twisted_reactors import asyncio
+
 from login2.models import user
 from loginDoctor.models import Doctor
 from django.contrib.sessions.backends.db import SessionStore

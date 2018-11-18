@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile Pic</title>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Timmana' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body style="background-image:url('https://image.freepik.com/free-vector/abstract-white-background-vector-illustration_1407-419.jpg');background-size:cover;">
+    <br><br><br>
+    <center>
+    <div class="container">
+      <div class="jumbotron" style='width:50%;'>
+        <p style='text-align:left;font-size:25px;color:#1b7011;font-family:Monoton;'><span style="color:#4451ff">D</span>OCA<br><hr style="width:90%;"></p>
+        <img id='preview'><br><br>
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-6 col-form-label"><h5 style="color:#000000; font-family:Acme">Upload Profile Pic :</h5></label>
+            <div class="col-sm-5">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" name="file">
+                <label id="name" class="custom-file-label" for="customFile" style="text-align:left;overflow:hidden;">Choose file</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <input type="submit"  class='btn btn-primary' value='Upload' style="width:70%;">
+            </div>
+            <div class="col-sm-6">
+              <a href="{% url 'patients:logout' %}" class='btn btn-secondary' style="width:70%;">Skip</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    </center>
+    <script type="text/javascript">
+      var pic=document.getElementById('customFile');
+      var preview=document.getElementById('preview');
+      pic.onchange=function(event){
+        preview.src=URL.createObjectURL(event.target.files[0]);
+        preview.style.width='150px';
+        preview.style.height='150px';
+        preview.style.border='1px solid black';
+        preview.style.borderRadius='50%';
+        document.getElementById('name').innerHTML=pic.files.item(0).name;
+      }
+    </script>
+  </body>
+</html>

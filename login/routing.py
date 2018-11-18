@@ -4,7 +4,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 #from ChatBox.consumer import  ChatConsumer
 from channels.sessions import SessionMiddlewareStack
 from ChatBox.consumer import msgConsumer
-from login.Consumer import healthConsumer
+from chatbot.Consumer import login,forgot,Chatbot
 from ChatBox.consumer2 import callConsumer
 application = ProtocolTypeRouter({
     'websocket':SessionMiddlewareStack(
@@ -12,7 +12,9 @@ application = ProtocolTypeRouter({
                     [
                         path('chat/chat/',msgConsumer),
                         path('chat/call/',callConsumer),
-                        path('healthAssistant/',healthConsumer)
+                        path('chatbot/',Chatbot),
+                        path('login/',login),
+                        path('fg/',forgot)
 
                     ]
 

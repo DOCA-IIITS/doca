@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOCA</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Timmana' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+  <body style="background-image:url('https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?cs=srgb&dl=bricks-pattern-texture-1092364.jpg&fm=jpg');background-size:cover;">
+    <div class="container-fluid">
+      <div class="row" style="background-color:#af0008">
+        <div style="width:10%;">
+          <img src="{% static "images/logo.png" %}" alt="ERROR!" id="logo" style="width:100%;height:100%">
+        </div>
+        <div style="width:60%;font-family: Monoton; font-size: 90px; color:#35a344;vertical-align:bottom;">
+          <span style="color:#4451ff">D</span>OCA
+        </div>
+        <div style="width:14%;" id='notif'>
+          <br><br>
+        </div>
+        <div style="width:8%;">
+          <br>
+          <img src="{% static dp %}" alt="ERROR!" style="width:67%; height:52%; border-radius:50%;">
+        </div>
+        <div style="width:8%;">
+          <br>
+          <p id="log"><br>{{ fname }}</p>
+        </div>
+      </div>
+      <div class="row" style="width:102%;background-color:#ffffff;">
+        <ul id='nav'>
+          <li class="l" style="background-color: #c5aa6a"><a style="color:inherit;text-decoration:none" href="{% url 'patients:home' %}">HOME</a></li>
+          <li class="l"><a style="color:inherit;text-decoration:none" href="{% url 'patients:profile' %}">PROFILE</a></li>
+          <li class="l"><a style="color:inherit;text-decoration:none" href="#">APPOINTMENT</a></li>
+          <li class="l"><a style="color:inherit;text-decoration:none" href="#">HISTORY</a></li>
+          <li class="l"><a style="color:inherit;text-decoration:none" href="#">FIND HOSPITALS</a></li>
+          <li class="l"><a style="color:inherit;text-decoration:none" href="#">FEEDBACK</a></li>
+          <li class="r"><a href='{% url 'doc_prof:logout' %}'><button style="width:100%;font-family:Impact;" class="btn btn-light" type="button" name="button">Logout</button></a></li>
+          <li class="r"><button type="button" name="notif" class="btn btn-info" style="width:100%;font-family:Impact">Notifications</button></li>
+        </ul>
+      </div><br><br><br>
+      <div class="row" id="ss" style="width:102.2%;height:450px;">
+        <p id="content"></p>
+      </div><br><br>
+      <div class="jumbotron" style="background-color:rgba(201,201,201,0.8)">
+        <p id='feed'>MEDICAL FEEDSTAND<hr style="width:90%;border-width:2px;"></p><br>
+        <div class="row">
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img1" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con1">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img2" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con2">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img3" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con3">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+        <div class="row">
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img4" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con4">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img5" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con5">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width:90%;height:100%;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+              <img class="card-img-top" id="img6" style="width:100%;height:70%" src="https://cdn2.coop.com.au/home/coop/web/comagento.com.au/shared/media/wysiwyg/Institutions/UQ/medical_uq.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" id="con6">doca ase project post content doca ase project post content doca ase project post content doca ase project post content doca ase project post content </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% static "javascript/script.js" %}"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Verification</title>
+    <style>
+      input[type=text]{height: 45px;width: 45px;font-size: 25px;text-align: center;border: 1px solid #000000;}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Timmana' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body style="background-image:url('https://image.freepik.com/free-vector/abstract-white-background-vector-illustration_1407-419.jpg');background-size:cover;">
+    <br><br><br>
+    <center>
+    <div class="container">
+      <div class="jumbotron" style='width:50%;'>
+        <p style='text-align:left;font-size:25px;color:#1b7011;font-family:Monoton;'><span style="color:#4451ff">D</span>OCA<span style="font-size:20px;color:black;font-family:Timmana"> - Verify</span>
+          <br><hr style="width:90%;"></p>
+        <p id='time' style='font-family:Ribeye;font-size:20px'>2 : 00</p>
+        <form action='\doc\verf' method="GET">
+          {% csrf_token %}
+          <input type="text" name="uidc" value="{{ uidc }}" hidden>
+          <input id='1' type="text" maxlength="1" name="o1" onkeyup="next(1,event)" onkeypress="return isNum(event)" autocomplete='off' autofocus>
+          <input id='2' type="text" maxlength="1" name="o2" onkeyup="next(2,event)" onkeypress="return isNum(event)" autocomplete='off'>
+          <input id='3' type="text" maxlength="1" name="o3" onkeyup="next(3,event)" onkeypress="return isNum(event)" autocomplete='off'>
+          <input id='4' type="text" maxlength="1" name="o4" onkeyup="next(4,event)" onkeypress="return isNum(event)" autocomplete='off'>
+          <input id='5' type="text" maxlength="1" name="o5" onkeyup="next(5,event)" onkeypress="return isNum(event)" autocomplete='off'>
+          <input id='6' type="text" maxlength="1" name="o6" onkeyup="next(6,event)" onkeypress="return isNum(event)" autocomplete='off'><br><br>
+          <div class="col-sm-10" style='color:#dc3545;font-size:13px;'>
+            {% if err1 %}
+            <b>{{ err1 }}</b>
+            {% endif %}
+            {% if err2 %}
+            <b>{{ err2 }}</b>
+            {% endif %}
+            {% if err3 %}
+            <b>{{ err3 }}</b>
+            {% endif %}
+          </div><br>
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <input style='width:70%;' type="submit" name="resend" class="btn btn-danger" value="Re-Send" id='rsend' disabled>
+            </div>
+            <div class="col-sm-6">
+              <input style='width:70%;' type="submit" name="verify" class="btn btn-success" id="v" value='Verify' disabled>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    </center>
+    <script type="text/javascript" src='{% static "javascript/otp.js" %}'></script>
+  </body>
+</html>

@@ -78,7 +78,7 @@ def con(request):
                     xdp[2]='static/uploads/A@DOCA@IIIT@DPdefualt.png'
                 d.append(xdp)
             print(c)
-            return render(request,'Chatbox/ChatContant.html',{'user_data':a,'doctor_list':d,'sid':request.session.session_key})
+            return render(request,'Chatbox/ChatContant.html',{'user_data':a,'doctor_list':d,'d12':2})
 
 
         else:
@@ -211,7 +211,7 @@ def adnew(request):
                                 f=open(dir_path+'/'+udp['dp'][:14]+'/'+udp['dp'][16:])
                                 f.close()
                             except FileNotFoundError:
-                                xdp['dp']='static/uploads/A@DOCA@IIIT@DPdefualt.png'
+                                udp['dp']='static/uploads/A@DOCA@IIIT@DPdefualt.png'
 
                         return render(request,'Chatbox/search.html',{'User':b})
 

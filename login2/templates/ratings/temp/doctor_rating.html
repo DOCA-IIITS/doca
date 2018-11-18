@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+       <div>
+
+<div style="background-color:lightblue;height: 200px;float:left;padding:50">
+  <h2>Doctor name</h2>
+  {% if doc %}
+  {% for doc in doc %}
+    {{doc.fname}}
+    <br>
+ {% endfor %}
+ {% endif %}
+</div>
+
+<div  style="background-color:lightblue;height: 200px;float:left;padding:50">
+<h2>Ratings</h2>
+  {% if rating %}
+  {% for i in rating %}
+   {{ i.rating__avg }}
+    <br>
+  {% endfor %}
+ {% endif %}
+</div>
+
+
+
+<div  style="background-color:lightblue;float:left;padding:50">
+  <h2>Comment</h2>
+  {% if comment %}
+  {% for i in comment %}
+   {{ i.comment }}
+    <br>
+  {% endfor %}
+ {% endif %}
+</div>
+
+
+</div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <style>
+    * {box-sizing: border-box}
+
+    .container {
+      width: 100%;
+      background-color: #ddd;
+    }
+
+    .skills {
+      text-align: right;
+      padding: 10px;
+      color: white;
+    }
+
+    .html {width: 9%; background-color: #4CAF50;}
+    .css {width: 8%; background-color: #2196F3;}
+    .js {width: 6%; background-color: #f44336;}
+    .php {width: 10%; background-color: #808080;}
+    </style>
+    </head>
+    <body>
+
+    <h1>My Skills</h1>
+
+    <p>HTML</p>
+    <div class="container">
+      <div class="skills html">9%</div>
+    </div>
+
+    <p>CSS</p>
+    <div class="container">
+      <div class="skills css">8%</div>
+    </div>
+
+    <p>JavaScript</p>
+    <div class="container">
+      <div class="skills js">6%</div>
+    </div>
+
+    <p>PHP</p>
+    <div class="container">
+      <div class="skills php">10%</div>
+    </div>
+
+      <div>
+<h2>Ratings</h2>
+<table>
+  {% if doc %}
+  {% for doc in doc %}
+  <tr>
+    <th> {{doc.fname}} </th>
+  </tr>
+ {% endfor %}
+ {% endif %}
+
+ {% if rating %}
+ {% for i in rating %}
+</table>
+
+<table>
+<tr>
+  <th> {{ i.rating__avg }}</th>
+  <th>{{i.comment}}</th>
+</tr>
+ {% endfor %}
+{% endif %}
+</table>
+</div>
+  </body>
+</html>
+-->

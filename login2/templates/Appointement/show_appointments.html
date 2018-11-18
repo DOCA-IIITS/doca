@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW APPOINTMENTS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/css/bootstrap.css' %}">
+    <link rel="styleaheet" href="{% static 'first_app/css/style.css' %}">
+</head>
+<body>
+
+
+    {% if doctors %}
+        <table class="class1">
+            <th>DOCTOR NAME </th>
+            <th>FEES</th>
+            <th>RATING</th>
+            {%  for doc in doctors %}
+
+                <form action="{%  url 'bookapp' %}" method="POST">
+                {% csrf_token %}
+            <tr>
+                <td id ="doc_name">
+                    <input type="hidden" name="doc_name" value="{{ doc.fname }}">{{ doc.fname }}
+                </td>
+                <td id="fees">
+                    <input type="hidden" name="fees" value="{{ doc.fees }}">{{ doc.fees }}
+                </td>
+                <td id="rating">
+                   <input type="hidden" name="rating" value="{{ doc.rating }}"> {{ doc.rating }}
+                </td>
+                <td>
+                    <input type="submit" value="Book">
+                </td>
+                <td>
+                    <input type="date" name="date" id="date" value="{{ doc.date }}">
+
+                </td>
+                <input type="hidden" name="Doctor_id" value="{{ doc.uid }}">
+
+
+            </tr>
+
+
+                </form>
+            {% endfor %}
+
+        </table>
+
+    {% else %}
+        <p>No Doctor Found</p>
+    {% endif %}
+
+</body>
+</html>
