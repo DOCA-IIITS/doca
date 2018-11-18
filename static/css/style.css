@@ -1,0 +1,49 @@
+body, html{margin: 0;padding: 0;width: 100%;height: 100%;}
+
+#title{font-family: Monoton; font-size: 75px; color:#49d85c;}
+
+#log{font-family: Impact;font-size: 20px;color: #ffffff;}
+
+#nav{list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color:#5f4c4c; width:99.9%; z-index: 1;border:2px solid black;}
+
+.l{float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; font-family: Impact;font-size: 20px;}
+
+.r{float:right; display: block; text-align: center; padding: 10px 12px;}
+
+.l:hover{background-color: #c5aa6a;}
+
+#ss{width: 100%; border: 2px solid black;background: url(https://medici.miodottore.it/hubfs/IT/Medico_stretta_di_mano.jpg?t=1538357353863);  background-size:cover; }
+
+#content{position: relative; top: 180px;left: 100px; width: 1000px; height: 200px; font-family: Carter One; font-size: 35px;}
+
+.text{font-size: 20px;}
+
+#feed{font-size: 40px; font-family:Impact;color: #1b7011;}
+
+.news{font-family: Timmana; background-color: rgba(68, 81, 255, 0.5); width:665px; height: 200px; padding: 10px 8px; text-align: center; border-radius: 15%; border: 2px solid black; border-style: ridge; font-size: 20px;}
+
+#propic{border-radius:50%;width:60%; height:240px;background-size: cover;text-align: center;}
+
+#propic:hover{box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);}
+
+#cp{display:none; font-family: Amita;cursor:pointer;font-size: 27px;border-radius: 50%;color:white;text-decoration: none;}
+
+#propic:hover #cp{display: block;}
+
+#area{height: 400px; width: 1324px; border: 3px solid black; border-style: groove; font-size: 30px;background-color: white;}
+
+.prof{border: 3px solid black; border-style: groove; padding: 10px 10px;}
+
+#tabs{list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color:rgba(27, 112, 17, 1); width:100%;}
+
+.tab{ display: block; color: white; text-align: center;padding: 14px 16px; text-decoration: none;font-family: Impact;}
+
+.tab:hover{background-color: #4451ff !important;}
+
+.b{background: none; border: none; padding: 0; cursor: pointer; width:100%;}
+
+.up{background-color: teal; border: 2px solid black; padding: 4px 6px; font-size: 25px; cursor: pointer; border-radius: 20%;}
+
+.up:hover{box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);}
+
+#form{border: 1px solid black; background-color: rgba(0,0,0,0.7);}

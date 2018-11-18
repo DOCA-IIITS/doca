@@ -1,0 +1,244 @@
+1,Upper abdominal pain,pain in upper abdominal,General physician
+2,Lower abdominal pain,pain in lower abdominal,General physician
+3,Abscess,collection of pus,General physician
+4,Alcohol abuse,Drinking habit,Psychiatrist
+5,Anxiety ,nervousness,Psychiatrist
+6,Arm ache or pain,muscle pain,orthopedist
+7,Back ache or pain,muscle pain,orthopedist
+8,Bleeding tendency,bleeding,Gynecologist
+9,Blood in vomit,blood vomiting,General physician
+10,Bloody diarrhea,diarrhea,General physician
+11,Pain of breast,chest pain,Gynecologist
+12,Calf pain,leg pain,orthopedist
+13,Chest pressure,heavyness in chest,Pulmonologist
+14,Chills,shivering,General physician
+15,Change in behavior,unhabited,Psychiatrist
+16,Constipation,motion problem,Gastroenterologist
+17,Cough,throat problem,ENT
+18,Dark stools,Dark stools,Gastroenterologist
+19,Depressed,stress,Psychiatrist
+20,Diarrhea,Dark stools,General physician
+21,Dizziness,dizzy,General physician
+22,Double vision,diplopia,Ophthalmologist
+23,Ear pressure,ear pain,ENT
+24,Pain in the ear,eye pain,Ophthalmologist
+25,Elbow ache or pain,hand bone pain,orthopedist
+26,Eye pain ,irritation in eye,Ophthalmologist
+27,Facial pain,facial muscle pain,Dermatologist
+28,Fainting,Dark stools,General physician
+29,Fever,Dark stools,General physician
+30,Fever in the returning traveler,phobia of  travel,General physician
+31,Fever of unknown origin,Dark stools,General physician
+32,Flank pain,Dark stools,General physician
+33,Frequent urination ,frequency,Urologist
+35,Foot pain,leg pain,orthopedist
+36,Cranky ,Dark stools,Psychiatrist
+37,Groin pain,Dark stools,orthopedist
+38,Delusions,hallucinations,Psychiatrist
+39,Hand ache,muscle pain,General physician
+40,Head injury,head hurt,Neurologist
+41,Headache,head pain,General physician
+42,Heel pain,leg pain,Physiotherapy
+43,Heat illness,phobia of  heat,Psychiatrist
+45,Hip pain,upper body pain,Physiotherapy
+46,Hives,Dark stools,Dermatologist
+47,Hoarse voice,Dark stools,ENT
+48,Hypothermia ,low temperature,General physician
+49,Incontinence ,leaking urine,Urologist
+50,Insect sting,insect bit,General physician
+51,Insomnia ,sleeping trouble,Psychiatrist
+52,Skin itching,allergy,Dermatologist
+53,Joint pain,pain in joint,orthopedist
+54,Kidney pain,flank pain,Urologist
+55,Knee pain,lower body pain,orthopedist
+56,Laceration,skin cut,Dermatologist
+57,Leg ache,leg pain,orthopedist
+58,Swelling of both legs,leg swelling,orthopedist
+59,Lethargy ,sluggishness,Psychiatrist
+61,Mouth pain,pain in mouth,ENT
+62,Muscle pain,Dark stools,orthopedist
+63,Nail Injury,nail hurt,General physician
+64,Nasal bleeding,bleeding nose,ENT
+65,Nasal injury,nose hurt,ENT
+66,Nausea,Dark stools,Gastroenterologist
+67,Neck ache,neck pain,Physiotherapy
+68,Neck swelling,swollen neck,Physiotherapy
+69,Numbness,numb,Physiotherapy
+70,Obesity,over weight,General physician
+71,Overdose,Dark stools,General physician
+72,Painful urination,urine trouble,Urologist
+73,Heart pulsations,palpitation,Cardiologist
+74,Pelvic pain,pelvic pain,Gastroenterologist
+75,Penile discharge,Dark stools,Sexologist
+76,Penis pain,private part pain,Sexologist
+77,Poisoning,poisoned,General physician
+78,Pregnancy problem,fertilisation problem,Gynecologist
+79,Psychiatric problem,mental problem,Psychiatrist
+80,Puncture wound,muscle injury,orthopedist
+81,Rash,allery,Dermatologist
+82,Rectal pain,Dark stools,Oncologist
+83,Rectal swelling,Dark stools,Oncologist
+85,Scrotal pain,private part pain,Sexologist
+86,Scrotal swelling,private part pain,Sexologist
+87,Seizure,fits,Neurologist
+88,Shortness of breath,breathing problem,General physician
+89,Shoulder ache or pain,upper body pains,orthopedist
+90,Sinus pain and pressure,sinus,ENT
+91,Skin trauma,trauma of skin,Dermatologist
+92,Snake bite,Dark stools,General physician
+93,Sore throat,throat problem,ENT
+94,Speech problem,throat problem,ENT
+95,Spider bite,insect bite,General physician
+96,Substance abuse,drugs,Neurologist
+97,Suicidal tendencies,no mental health,Psychiatrist
+98,Swallowing problem ,dysphagia,ENT
+99,Swelling,Dark stools,orthopedist
+100,Toe pain,lower leg pain,Physiotherapy
+101,Tooth pain,paining teeth,Dentist
+102,Trauma,Dark stools,Psycologist
+103,Traveler's diarrhea,diarrhea,General physician
+104,Unsteady gait ,trouble walking,General physician
+105,Vaginal bleeding,private part issue,Sexologist
+106,Vaginal bleeding after menopause,private part issue,Sexologist
+107,Vaginal bleeding during pregnancy,private part issue,Sexologist
+108,Vaginal discharge,private part issue,Sexologist
+109,Vaginal itching,allergy,Sexologist
+110,Vaginal pain,private part issue,Sexologist
+111,Vertigo ,room spinning,Psychiatrist
+112,Visual problems,eye problem,Ophthalmologist
+113,Vomiting,vomits,General physician
+114,General weakness,weakness,Psychiatrist
+115,Weakness ,muscle localized,orthopedist
+116,Tired,low energy,General physician
+118,Wrist pain,hand pain,Physiotherapy
+120,Throat pain,paining throat,ENT
+121,Tremors,Dark stools,orthopedist
+123,Weight loss,unexplained,General physician
+126,Tongue swelling,oral swelling,ENT
+128,Inconsolable baby,baby problem,Pediatrician
+129,Wheezing ,noisy breathing,ENT
+131,Swollen lymph nodes ,large lymph nodes,Immunologist
+132,Failure to thrive,Dark stools,Pediatrician
+136,Behavioral problem,behaviour issue,Psychiatrist
+139,Itchy rash,pruritic rash,Dermatologist
+145,Headache after trauma,headache of trauma,General physician
+146,Learning difficulties,learning problem,Psychiatrist
+147,Blood in urine,hematuria,Urologist
+148,Urinary retention ,inability to urine,Urologist
+149,Liver failure ,cirrhosis,Urologist
+150,Choking,Dark stools,ENT
+152,Painful rash,allergy,Dermatologist
+153,Ingestion,ingestion problem,Gastroenterologist
+155,Melena ,black stools from blood,Gastroenterologist
+156,Vomiting coffee ground material,Dark stools,Gastroenterologist
+157,Ringing in ears ,tinnitus,ENT
+158,Mouth ulcers,oral problem,ENT
+159,Mouth swelling,oral problem,ENT
+160,Eye redness,red eye,Ophthalmologist
+162,Sneezing,running nose,ENT
+163,Bleeding gums,mumphs,ENT
+164,Loss of balance,unstable,Psychiatrist
+165,Bleeding in brain,Dark stools,Neurologist
+170,Cyanosis ,blue skin coloration,Dermatologist
+171,Muscle spasm,Dark stools,orthopedist
+172,Drooling,Dark stools,ENT
+173,Abdominal swelling ,stomach swelling,Gastroenterologist
+174,Skin growths,skin problem,Dermatologist
+176,Hand numbness,paresthesias,Physiotheraphy
+177,Ankle pain,lower leg pain,orthopedist
+178,Hemoptysis ,coughing blood,Oncologist
+179,Jaundice ,yellowing skin,Urologist
+180,Night sweats,Dark stools,Sexologist
+181,Flatulence ,passing gas,Gastroenterologist
+183,Blister ,pocket of fluid,Dermatologist
+186,Hair loss ,baldness,Dermatologist
+187,Jaw pain,oral pain,ENT
+188,Impotence,non potential,Sexologist
+189,Heart murmur ,abnormal heartbeat,Cardiologist
+190,Pustule,collection pus,Dermatologist
+191,Skin pain,skin problem,Dermatologist
+192,Hot skin,skin problem,Dermatologist
+193,Skin swelling,skin problem,Dermatologist
+194,Lip swelling,oral problem,Dermatologist
+195,Eye swelling,eye problem,Ophthalmologist
+196,Foot swelling,lower leg problem,Physiotherapy
+197,Visual flashing lights,vision problem,Ophthalmologist
+198,Eye floaters,eye problem,Ophthalmologist
+199,Amenorrhea,no menstruation,Sexologist
+200,Blurry vision,vision problem,Ophthalmologist
+202,Painful gums,mumphs,ENT
+203,Swollen gums,oral problem,ENT
+204,Low blood sugar,low sugar levels in blood,Diabetologist
+205,Low blood pressure,Dark stools,Diabetologist
+206,Darkening of the skin ,hyperpigmention,Dermatologist
+207,Low heart rate,heart problem,Cardiologist
+208,Foot itching,allergy,Dermatologist
+209,Hot flashes,Dark stools,Sexologist
+211,Infertility ,female,Sexologist
+212,Increased facial hair,facial hair problem,Dermatologist
+213,Arm swelling,arm problem,orthopedist
+214,Calf swelling,leg problem,orthopedist
+216,Ear swelling,eye problem,Ophthalmologist
+217,Wrist swelling,arm problem,orthopedist
+218,Maroon stools,Dark stools,Gynecologist
+219,Arm cut ,arm laceration,orthopedist
+220,Hand cut ,hand laceration,orthopedist
+221,Leg cut ,leg laceration,orthopedist
+222,Foot cut ,foot laceration,orthopedist
+225,Arm itching,allergy,Dermatologist
+226,Hand redness,skin redness,Dermatologist
+227,Foot redness,red foot,Dermatologist
+228,Arm redness,red arm,Dermatologist
+229,Leg redness,red leg,Dermatologist
+230,Hand itching,allergy,Dermatologist
+231,Leg itching,allergy,Dermatologist
+232,Steatorrhea ,excess fat in stool,General physician
+233,Upper leg pain,leg pain,orthopedist
+234,Armpit pain,pain in armpit,orthopedist
+235,Sweating,skin problem,Dermatologist
+236,Nasal congestion,nasal problem,ENT
+237,Joint stiffness,joint problem,orthopedist
+238,Skin sores,skin problem,Dermatologist
+239,Chest burning,burning chest,Gastroenterologist
+240,Memory loss,lost memory,Neurologist
+241,Arm numbness ,arm paresthesias,orthopedist
+242,Leg numbness ,leg paresthesias,orthopedist
+243,Foot numbness ,foot paresthesias,orthopedist
+244,Face numbness,face paresthesias,orthopedist
+246,Dementia,Dark stools,Neurologist
+247,Facial droop ,weakness,Dermatologist
+248,Limping in a child,Dark stools,Pediatrician
+249,Increased thirst,tendency to drink ,General physician
+250,Increased urination ,polyuria,Urologist
+251,Shin pain,pain at shin,ENT
+252,Stings,insect bit,General physician
+254,Sleep disorders,insufficient sleep,Psychiatrist
+255,Drooping eyelid ,ptosis,General physician
+257,Snoring,sound while sleeping,General physician
+258,Dry skin,skin  dryness,Dermatologist
+259,Itchy eyes,eye itching,Ophthalmologist
+261,Elbow swelling,swollen elbow,orthopedist
+262,Chest pain,pain in chest,Cardiologist
+263,Skin infection,infection,Dermatologist
+264,Stomach pain,Dark stools,Gastroenterologist
+265,Anger,no patience,Psychiatrist
+269,Hurts to breathe,trouble of breathing,ENT
+271,Pulling at ears,ear problem,Ophthalmologist
+272,Skin bumps,skin problem,Dermatologist
+273,Congestion in chest ,Dark stools,Cardiologist
+274,Discharge from ear,ear problem,ENT
+275,Low back ache,low back pain,Physiotherapy
+277,Unusual color,odor of urine,Urologist
+281,Penis inflammation ,private swelling,Sexologist
+282,Excessive appetite,hugryness,General physician
+284,Retaining fluid,insufficient fluid,General physician
+287,Lump ,Dark stools,Dermatologist
+290,Neck stiffness,posture disorder,Physiotherapy
+291,Agitated,Dark stools,Neurologist
+292,Confusion,mentally weak,Psychiatrist
+293,weakness,weak,Psychiatrist
+294,Confusion ,mentally weak,Psychiatrist
+301,Shoulder stiffness ,shoulder stiffness,Physiotherapy
+303,Arm stiffness,arm tightness,Physiotheraphy
+304,High blood pressure,high levels blood pressure,Diabetologist
+306,High blood sugar,high levels blood sugar,Diabetologist
